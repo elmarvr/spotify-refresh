@@ -2,6 +2,10 @@ window.onload = () => {
 	const copyBtn = document.querySelector('[data-copy]');
 	const copyText = document.querySelector('[data-copy-text]');
 
+	if (!copyBtn || !copyText) {
+		return;
+	}
+
 	copyBtn.addEventListener('click', async () => {
 		if (navigator.clipboard && window.isSecureContext) {
 			await navigator.clipboard.writeText(copyText.value);
