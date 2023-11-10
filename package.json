@@ -1,0 +1,21 @@
+{
+	"name": "spotify-accesstoken",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"tailwind": "tailwindcss -i ./src/index.css -o ./public/tailwind.css -w",
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev --live-reload",
+		"start": "wrangler dev"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20230419.0",
+		"tailwindcss": "^3.3.5",
+		"typescript": "^5.0.4",
+		"wrangler": "^3.0.0"
+	},
+	"dependencies": {
+		"hono": "^3.9.2",
+		"tailwind-merge": "^2.0.0"
+	}
+}
